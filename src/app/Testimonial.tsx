@@ -1,6 +1,6 @@
 const Testimonial = () => {
   return (
-    <section className='h-screen w-screen snap-start'>
+    <section className='h-screen w-screen snap-start' id='quotes'>
       <div className='container px-5 py-[300px] mx-auto'>
         <div className='xl:w-1/2 lg:w-3/4 w-full mx-auto text-center'>
           <svg

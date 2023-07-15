@@ -35,8 +35,8 @@ const Contact = () => {
   }
 
   return (
-    <section className='text-[#636C80] body-font relative h-full w-screen snap-start' id='contact'>
-      <div className='container px-5 pt-24 mx-auto flex sm:flex-nowrap flex-wrap'>
+    <section className='h-screen w-screen snap-start' id='contact'>
+      <div className='container px-5 pt-40 mx-auto flex sm:flex-nowrap flex-wrap'>
         <div className='lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative'>
           <Image src={banner2} className='absolute inset-0 object-cover object-center w-full h-full' alt='banner' />
           <div className='bg-white relative flex flex-wrap py-6 rounded shadow-md'>

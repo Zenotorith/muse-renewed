@@ -22,17 +22,17 @@ const Navbar = () => {
         >
           <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-12'>
             <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#'>
+              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#about-us'>
                 Về chúng tôi
               </Link>
             </li>
             <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#'>
+              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#quotes'>
                 Công việc
               </Link>
             </li>
             <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#'>
+              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#course'>
                 Khóa học
               </Link>
             </li>
