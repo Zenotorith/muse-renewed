@@ -21,7 +21,7 @@ const Mansory = () => {
 
   return (
     <section className='w-screen bg-[#23272F] snap-start' id='course'>
-      <div className='container mx-auto py-28 md:flex-row flex-col items-center'>
+      <div className='container mx-auto py-24 md:flex-row flex-col items-center'>
         <h1 className='title-font sm:text-4xl text-center text-3xl mb-8 font-medium text-white'>
           Lorem ipsum dolor sit almet
         </h1>
