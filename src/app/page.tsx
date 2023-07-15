@@ -1,18 +1,18 @@
 'use client'
 import Image from 'next/image'
 
-import Navbar from '../components/Navigations/Navbar'
-import Footer from '../components/Navigations/Footer'
+import Navbar from '@/app/Navbar'
+import Footer from '@/app/Footer'
 
-import Hero from '@/components/Home/Hero'
-import Introduction from '@/components/Home/Introduction'
-import Testimonial from '@/components/Home/Testimonial'
-import Mansory from '@/components/Home/Mansory'
-import Contact from '@/components/Home/Contact'
+import Hero from '@/app/Hero'
+import Introduction from '@/app/Introduction'
+import Testimonial from '@/app/Testimonial'
+import Mansory from '@/app/Mansory'
+import Contact from '@/app/Contact'
 
 export default function App() {
   return (
-    <main className='h-screen w-screen snap-y snap-mandatory overflow-x-hidden'>
+    <main className='h-screen w-screen snap-y snap-proximity overflow-x-hidden scroll-smooth'>
       <Navbar />
       <Hero />
       <Introduction />

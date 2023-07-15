@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Form from '@/types'
 
-import banner2 from '../../assets/banner-2.png'
+import banner2 from '@/assets/banner-2.png'
 
 const Contact = () => {
   const [formData, setFormData] = useState<Form>({
