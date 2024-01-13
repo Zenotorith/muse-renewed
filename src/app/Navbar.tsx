@@ -7,6 +7,12 @@ import logo from '@/assets/logo.png'
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false)
 
+  const NAVIGATION_ITEM = [
+    { name: 'Về chúng tôi', link: '#about-us' },
+    { name: 'Công việc', link: '#quotes' },
+    { name: 'Khóa học', link: '#course' }
+  ]
+
   return (
     <header className='bg-[#23272F] fixed w-screen z-50'>
       <nav className='flex justify-between items-center container mx-auto h-[72px]'>
@@ -21,21 +27,13 @@ const Navbar = () => {
           }  md:w-auto w-full flex items-center px-5`}
         >
           <ul className='flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-12'>
-            <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#about-us'>
-                Về chúng tôi
-              </Link>
-            </li>
-            <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#quotes'>
-                Công việc
-              </Link>
-            </li>
-            <li>
-              <Link className='text-gray-400 hover:text-white transition-colors duration-500' href='#course'>
-                Khóa học
-              </Link>
-            </li>
+            {NAVIGATION_ITEM.map((menu) => (
+              <li key={menu.name}>
+                <Link className='text-gray-400 hover:text-white transition-colors duration-500' href={menu.link}>
+                  {menu.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className='flex items-center gap-6'>

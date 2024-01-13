@@ -16,8 +16,14 @@ import image10 from '@/assets/gallery/masonry/image-9.jpg'
 import image11 from '@/assets/gallery/masonry/image-10.jpg'
 import image12 from '@/assets/gallery/masonry/image-11.jpg'
 
+const MANSORY_MENU = ['3D Render', 'Illustration', 'Photoshop', 'Sketch']
+
 const Mansory = () => {
-  const [checked, isChecked] = useState<boolean>(false)
+  const [checked, setChecked] = useState(MANSORY_MENU[0])
+
+  const checkButton = (menuTtem: any) => {
+    setChecked(menuTtem)
+  }
 
   return (
     <section className='w-screen bg-[#23272F] snap-start' id='course'>
@@ -26,30 +32,18 @@ const Mansory = () => {
           Lorem ipsum dolor sit almet
         </h1>
         <div className='flex items-center justify-center flex-wrap'>
-          <button
-            type='button'
-            className='bg-[#4ED9F8] text-gray-800 hover:text-gray-800 hover:bg-[#4ED9F8] transition-colors duration-500 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3'
-          >
-            3D Render
-          </button>
-          <button
-            type='button'
-            className='bg-[#3D4453] text-white hover:text-gray-800 hover:bg-[#4ED9F8] transition-colors duration-500 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3'
-          >
-            Illustration
-          </button>
-          <button
-            type='button'
-            className='bg-[#3D4453] text-white hover:text-gray-800 hover:bg-[#4ED9F8] transition-colors duration-500 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3'
-          >
-            Photoshop
-          </button>
-          <button
-            type='button'
-            className='bg-[#3D4453] text-white hover:text-gray-800 hover:bg-[#4ED9F8] transition-colors duration-500 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3'
-          >
-            Sketch
-          </button>
+          {MANSORY_MENU.map((menu) => (
+            <button
+              onClick={() => checkButton(menu)}
+              type='button'
+              key={menu}
+              className={`${
+                checked === menu ? 'bg-[#4ED9F8]' : 'bg-[#3D4453]'
+              }  text-gray-800 hover:text-gray-800 hover:bg-[#4ED9F8] transition-colors duration-500 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3`}
+            >
+              {menu}
+            </button>
+          ))}
         </div>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 pt-24 pb-24'>
           <div className='grid gap-4'>
