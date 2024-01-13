@@ -2,26 +2,14 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-
-import image from '@/assets/gallery/masonry/image.jpg'
-import image2 from '@/assets/gallery/masonry/image-1.jpg'
-import image3 from '@/assets/gallery/masonry/image-2.jpg'
-import image4 from '@/assets/gallery/masonry/image-3.jpg'
-import image5 from '@/assets/gallery/masonry/image-4.jpg'
-import image6 from '@/assets/gallery/masonry/image-5.jpg'
-import image7 from '@/assets/gallery/masonry/image-6.jpg'
-import image8 from '@/assets/gallery/masonry/image-7.jpg'
-import image9 from '@/assets/gallery/masonry/image-8.jpg'
-import image10 from '@/assets/gallery/masonry/image-9.jpg'
-import image11 from '@/assets/gallery/masonry/image-10.jpg'
-import image12 from '@/assets/gallery/masonry/image-11.jpg'
+import ImageGallery from '@/components/ImageGallery'
 
 const MANSORY_MENU = ['3D Render', 'Illustration', 'Photoshop', 'Sketch']
 
 const Mansory = () => {
-  const [checked, setChecked] = useState(MANSORY_MENU[0])
+  const [checked, setChecked] = useState<string>(MANSORY_MENU[0])
 
-  const checkButton = (menuTtem: any) => {
+  const checkButton = (menuTtem: string) => {
     setChecked(menuTtem)
   }
 
@@ -46,50 +34,7 @@ const Mansory = () => {
           ))}
         </div>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 pt-24 pb-24'>
-          <div className='grid gap-4'>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image2} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image3} alt='' />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image4} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image5} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image6} alt='' />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image7} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image8} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image9} alt='' />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image10} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image11} alt='' />
-            </div>
-            <div>
-              <Image className='h-auto max-w-full rounded-lg' src={image12} alt='' />
-            </div>
-          </div>
+          <ImageGallery />
         </div>
       </div>
     </section>
